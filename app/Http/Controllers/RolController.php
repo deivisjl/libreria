@@ -1,6 +1,6 @@
 <?php namespace LibreriaControl\Http\Controllers;
 
-class HomeController extends Controller {
+class RolController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,10 +28,30 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function getIndex(){
+		return 'Pagina de inicio rol validado';
+	}
+	public function getCrearRol()
 	{
 		//return view('home');
 		return 'Pagina de inicio validado';
 	}
-
+	public function postCrearRol()
+	{
+		//return view('home');
+		return 'Pagina de inicio validado';
+	}
+	public function getActualizarRol()
+	{
+		//return view('home');
+		return 'Pagina de inicio validado';
+	}
+	public function postActualizarRol()
+	{
+		//return view('home');
+		return 'Pagina de inicio validado';
+	}
+	public function missingMethod($parameters = array()){
+		abort(404);
+	}
 }

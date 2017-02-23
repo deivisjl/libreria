@@ -1,6 +1,6 @@
 <?php namespace LibreriaControl\Http\Controllers;
 
-class HomeController extends Controller {
+class UsuarioController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,10 +28,31 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function getIndex(){
+		return 'Pagina de inicio usuario validado';
+	}
+
+	public function getCrearUsuario()
 	{
 		//return view('home');
 		return 'Pagina de inicio validado';
 	}
-
+	public function postCrearUsuario()
+	{
+		//return view('home');
+		return 'Pagina de inicio validado';
+	}
+	public function getActualizarUsuario()
+	{
+		//return view('home');
+		return 'Pagina de inicio validado';
+	}
+	public function postActualizarUsuario()
+	{
+		//return view('home');
+		return 'Pagina de inicio validado';
+	}
+	public function missingMethod($parameters = array()){
+		abort(404);
+	}
 }

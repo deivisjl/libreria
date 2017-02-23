@@ -6,42 +6,33 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
-
-	use Authenticatable, CanResetPassword;
+class Persona extends Model {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'usuario';
+	protected $table = 'persona';
 
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id','email', 'password','enabled','persona_id','rol_id'];
+	protected $fillable = ['id','nombres', 'apellidos','genero','telefono','direccion','ciudad'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
-	protected $hidden = ['password', 'remember_token'];
+	//protected $hidden = ['password', 'remember_token'];
 
+	public function usuario(){
 
-	public function childPersona(){
+		return $this->hasMany('LibreriaControl\User');
 
-		$this->belongsTo('LibreriaControl\Persona');
-
-	}
-
-	public function childRol(){
-
-		$this->belongsTo('LibreriaControl\Rol');
-		
 	}
 
 }

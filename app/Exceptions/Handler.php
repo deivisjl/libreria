@@ -3,6 +3,8 @@
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
+use Illuminate\Session\TokenMismatchException;
+
 class Handler extends ExceptionHandler {
 
 	/**
@@ -36,14 +38,27 @@ class Handler extends ExceptionHandler {
 	 */
 	public function render($request, Exception $e)
 	{
-		if ($this->isHttpException($e))
+		/*if ($this->isHttpException($e))
 		{
 			return $this->renderHttpException($e);
 		}
 		else
 		{
 			return parent::render($request, $e);
+		}*/
+		if($e instanceof TokenMismatchException){
+
+			return redirect($request->url())->with('csrf','Al parecer paso mucho tiempo, intenta de nuevo');
+
 		}
+		
+		if(config('app.debug')){
+
+			return parent::render($request, $e);
+
+		}
+
+		return redirect('/')->with('error','Algo salió mal');
 	}
 
 }

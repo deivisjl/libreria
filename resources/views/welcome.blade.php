@@ -1,4 +1,4 @@
-<html>
+<!--html>
 	<head>
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
@@ -35,12 +35,23 @@
 			}
 		</style>
 	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
+	<body-->
+@extends('app')
+
+@section('content')
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">Inicio</div>
+
+				<div class="panel-body">
+					Debe loguearse para usar el sistema..!
+				</div>
 			</div>
 		</div>
-	</body>
-</html>
+	</div>
+</div>
+@endsection
+	<!--/body>
+</html-->

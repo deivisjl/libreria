@@ -28,9 +28,13 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getIndex()
 	{
 		return view('welcome');
+		//return 'Bienvenido a la app';
+	}
+	public function missingMethod($parameters = array()){
+		abort(404);
 	}
 
 }
