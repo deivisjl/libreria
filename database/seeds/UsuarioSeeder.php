@@ -30,6 +30,7 @@ class UsuarioSeeder extends Seeder {
 				'nombre_rol' => "Administrador"
 			]);
 
+		User::create(
 			[
 				'email' => "admin",
 				'password' => bcrypt("12345"),
