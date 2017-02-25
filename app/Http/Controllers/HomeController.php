@@ -30,8 +30,8 @@ class HomeController extends Controller {
 	 */
 	public function getIndex()
 	{
-		//return view('home');
-		return 'Pagina de inicio validado';
+		return view('home');
+		//return 'Pagina de inicio validado';
 	}
 
 }
