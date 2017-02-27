@@ -25,18 +25,61 @@ class UsuarioSeeder extends Seeder {
 				'direccion' => "direccionAdmin",
 				'ciudad' => "ciudadAdmin"
 			]);
+		Persona::create(
+			[
+				'nombres' => "Nombredigitador",
+				'apellidos' => "Apellidodigitador",
+				'genero' => "M",
+				'telefono' => 7885,
+				'direccion' => "direccionDigitador",
+				'ciudad' => "ciudadDigitador"
+			]);
+		Persona::create(
+			[
+				'nombres' => "NombreVendedor",
+				'apellidos' => "ApellidoVendedor",
+				'genero' => "M",
+				'telefono' => 7885,
+				'direccion' => "direccionVendedor",
+				'ciudad' => "ciudadVendedor"
+			]);
+
 		Rol::create(
 			[
 				'nombre_rol' => "Administrador"
 			]);
+		Rol::create(
+			[
+				'nombre_rol' => "Digitador"
+			]);
+		Rol::create(
+			[
+				'nombre_rol' => "Vendedor"
+			]);
 
 		User::create(
 			[
-				'email' => "admin",
+				'email' => "admin@gmail.com",
 				'password' => bcrypt("12345"),
 				'enabled' => 1,
 				'persona_id' => 1,
 				'rol_id' => 1
+			]);
+		User::create(
+			[
+				'email' => "digitador@gmail.com",
+				'password' => bcrypt("12345"),
+				'enabled' => 1,
+				'persona_id' => 2,
+				'rol_id' => 2
+			]);
+		User::create(
+			[
+				'email' => "vendedor@gmail.com",
+				'password' => bcrypt("12345"),
+				'enabled' => 1,
+				'persona_id' => 3,
+				'rol_id' => 3
 			]);
 
 

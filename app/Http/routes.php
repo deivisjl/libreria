@@ -17,9 +17,12 @@
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
+	'app/proveedor' => 'ProveedorController',
 	'app/persona' => 'PersonaController',
 	'app/usuario' => 'UsuarioController',
 	'app/rol' => 'RolController',
 	'app' => 'HomeController',
 	'/' => 'WelcomeController'
 ]);
+
+

@@ -6,21 +6,22 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class Persona extends Model {
+class Proveedor extends Model {
+
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'persona';
+	protected $table = 'proveedor';
 
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id','nombres', 'apellidos','genero','telefono','direccion','ciudad'];
+	protected $fillable = ['persona_id','nombre_empresa','nit','telefono_empresa','enabled'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -29,15 +30,10 @@ class Persona extends Model {
 	 */
 	//protected $hidden = ['password', 'remember_token'];
 
-	public function usuario(){
 
-		return $this->hasMany('LibreriaControl\User');
+	public function persona(){
 
-	}
-
-	public function proveedor(){
-
-		return $this->hasMany('LibreriaControl\Proveedor');
+		$this->belongsTo('LibreriaControl\Persona');
 
 	}
 

@@ -38,7 +38,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">Líbreria Control</a>
+				<a class="navbar-brand" href="/">Librería Control</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -63,9 +63,11 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->email }} <span class="fa fa-user-circle fa-2x"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="/"><span class="fa fa-users fa-1x"></span> Usuarios</a></li>
 								<li><a href="/"><span class="fa fa-unlock-alt fa-1x"></span> Cambiar contraseña</a></li>
+								@if(Auth::user()->rol_id == 1)
+								<li><a href="/"><span class="fa fa-users fa-1x"></span> Usuarios</a></li>
             					<li><a href="/"><span class="fa fa-cog fa-1x"></span> Backup</a></li>
+            					@endif
 								<li><a href="/auth/logout"><span class="fa fa-sign-out fa-1x"></span> Salir</a></li>
 							</ul>
 						</li>
