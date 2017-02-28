@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>Libreria | Control</title>
 
 	<link href="/css/app.css" rel="stylesheet">
 	<link href="/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -13,9 +13,32 @@
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
 	<style type="text/css">
+			.navbar-default {
+		    background: linear-gradient(to bottom, #1e5799 0%, #207cca 48%,#207cca 48%,#207cca 49%,#2989d8 68%,#7db9e8 100%) !important;
+		    border-color: #ded8d8 !important;
+			}
+			.navbar-default .navbar-nav > li > a {
+			    color: #fff !important;
+			}
+
+			.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+					    background-color: #2f70d2 !important;
+					    border-radius: 5px !important;
+					}
+			.navbar-default .navbar-nav > li > a:hover {
+			    color: #000 !important;
+			}
+			.navbar-default .navbar-nav > li > a:focus {
+			    background-color: #2f70d2 !important;
+					    border-radius: 5px !important;
+			}		
+
+			.navbar-default .navbar-brand {
+			    color: #fff !important;
+			}
 		@media (min-width: 1200px){
 			.container {
-			    width: 98% important!;
+			    width: 98% !important;
 		}
 	}
 			
