@@ -30,8 +30,15 @@ class ProveedorController extends Controller {
 	 */
 	public function getIndex()
 	{
-		return view('home');
+		return view('proveedor.index');
 		//return 'Pagina de inicio validado';
+	}
+	public function getAgregar(){
+		return view('proveedor.agregar');
+	}
+
+	public function getListar(){
+		return null;
 	}
 
 }
